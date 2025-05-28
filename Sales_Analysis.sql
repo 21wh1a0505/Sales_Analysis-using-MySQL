@@ -1,0 +1,26 @@
+-- create database COMPANY;
+-- use company;
+-- select * from sales;
+-- find allorders shipped via 'Economy' Mode with a total amount  greater than 25000.
+-- select * from sales where Ship_Mode='Economy' and Total_Amount>2500;
+-- retrive all sales data for 'Technology' category in 'Ireland' made after 2020-01-01.
+-- select * from sales where Category='Technology' and Country='Ireland' and  Order_Date>'2020-01-01';
+-- list the top 10 most profitable sales trasaction in desending order.
+-- select * from  sales order by  Unit_Profit desc limit 10;
+-- select * from  sales order by  Unit_Profit desc limit 10,20;
+-- find all customers whose name starts with 'J' and ends with 'n'
+-- select Order_ID,Customer_Name from sales where Customer_Name like 'j%n';
+-- retrive all product names that contain 'Acco' any where in the name
+-- select Order_ID,Product_Name from sales where Product_Name like '%Acco%';
+-- get the top 5 cities with the heighest total sales amount.
+-- select City,sum(Total_Amount) as Total_Sales from sales group by  City order by Total_Sales desc limit 5;
+/* Display the second set of 10 records for Customer_Name and Total_Amount in decreasing order */
+-- select Customer_Name, Total_Amount from sales order by  Total_Amount desc limit 10,10;
+-- find the revenue,average unit cost,and total number of orders
+-- select sum(Total_Amount) as 'Total_Revenue' ,avg(Unit_Cost) as 'Avrage_Unit_Cost' ,count(Order_ID) as 'Number_Of_Orders' from sales;
+-- count unique number of regions
+-- select count(distinct(Region)) from sales;
+-- find the number of orders places by each cuostomer.
+-- select Customer_Name,count(Order_ID) as Order_Count from sales group by Customer_Name order by Order_Count desc;
+-- rank 5 products based on total sales using Rank().
+select Product_Name,sum(Total_Amount)as Total_Sales,RANK() over (order by sum(Total_Amount) desc) as sales_Rank from sales group by Product_Name limit 5;
