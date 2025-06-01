@@ -1,0 +1,44 @@
+# Welcome to My Profile Page
+
+ Features Included:
+🧱 1. HTML Structure
+A welcoming heading (<h1>)
+
+A profile photo using the <img> tag
+
+A short personal introduction (name, class, and hobby)
+
+A "Say Hello" button that interacts with the user
+
+A contact form with fields:
+
+Name
+
+Email
+
+Message
+
+Submit button
+
+🎨 2. CSS Styling
+Light blue background for a pleasant look
+
+Centered and styled profile photo
+
+Highlighted text using a .bold class
+
+Styled form with rounded borders and shadow effects
+
+Responsive layout with centered elements and clean spacing
+
+🧠 3. JavaScript Functionality
+"Say Hello" button prompts the user for their name
+
+Displays a personalized greeting using alert()
+
+🗂️ Technologies Used
+HTML – for page structure
+
+CSS – for styling and layout
+
+JavaScript – for dynamic user interaction
